@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selamat Hari Guru ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff1eb, #ace0f9);
+    color: #49352d;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.card {
+    background: rgba(255,255,255,0.88);
+    padding: 45px 30px;
+    border-radius: 25px;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+    border: 2px solid white;
+    animation: muncul 1.2s ease;
+    z-index: 2;
+}
+
+.emoji {
+    font-size: 65px;
+    animation: goyang 2s infinite;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 7vw, 55px);
+    color: #b75c69;
+    margin: 15px 0;
+}
+
+.subtitle {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #755b52;
+}
+
+.line {
+    width: 90px;
+    height: 4px;
+    background: #e99aa5;
+    margin: 22px auto;
+    border-radius: 10px;
+}
+
+button {
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    background: #c66b79;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #a94f60;
+    transform: translateY(-4px);
+}
+
+.message {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+    background: #fff1f2;
+    border-radius: 18px;
+    line-height: 2;
+    animation: muncul 0.8s ease;
+}
+
+.message.show {
+    display: block;
+}
+
+.message h2 {
+    color: #b75c69;
+    margin-bottom: 15px;
+}
+
+.signature {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #b75c69;
+}
+
+footer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #977b72;
+}
+
+.flower {
+    position: fixed;
+    top: -30px;
+    font-size: 23px;
+    pointer-events: none;
+    animation: jatuh linear forwards;
+    z-index: 1;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes goyang {
+    0%, 100% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg); }
+}
+
+@keyframes jatuh {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width: 480px) {
+    .card {
+        padding: 35px 20px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="card">
+
+    <div class="emoji">🌷📚</div>
+
+    <h1>Selamat Hari Guru!</h1>
+
+    <div class="line"></div>
+
+    <p class="subtitle">
+        Untuk semua guru hebat yang telah menjadi
+        cahaya dalam perjalanan ilmu kami.
+        Terima kasih telah mendidik, membimbing,
+        dan menginspirasi tanpa mengenal lelah.
+    </p>
+
+    <br>
+
+    <button onclick="bukaPesan()">
+        💌 Buka Pesan Spesial
+    </button>
+
+    <button onclick="musik()">
+        🎵 Musik
+    </button>
+
+    <div class="message" id="pesan">
+
+        <h2>Untuk Guruku Tercinta ❤️</h2>
+
+        <p>
+            Guru bukan hanya seseorang yang mengajarkan
+            kami membaca dan menulis.
+            Guru adalah seseorang yang mengajarkan
+            kami arti kehidupan.
+        </p>
+
+        <br>
+
+        <p>
+            Terima kasih atas setiap ilmu,
+            kesabaran, nasihat, dan perjuangan
+            yang telah diberikan kepada kami.
+        </p>
+
+        <br>
+
+        <p>
+            Mungkin kami tidak selalu menjadi murid
+            yang sempurna, tetapi setiap ilmu
+            yang Bapak dan Ibu berikan akan selalu
+            menjadi bekal untuk masa depan kami.
+        </p>
+
+        <br>
+
+        <p>
+            Semoga Bapak dan Ibu Guru selalu sehat,
+            bahagia, dan diberikan keberkahan.
+        </p>
+
+        <div class="signature">
+            Terima kasih, Guruku! ❤️
+        </div>
+
+    </div>
+
+    <footer>
+        Dibuat dengan ❤️ sebagai bentuk penghargaan
+        untuk para pahlawan tanpa tanda jasa.
+        <br>
+        © 2026 Hari Guru Nasional
+    </footer>
+
+</div>
+</section>
+
+<audio id="lagu" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+let terbuka = false;
+let bermain = false;
+
+function bukaPesan() {
+    const pesan = document.getElementById("pesan");
+
+    terbuka = !terbuka;
+
+    pesan.classList.toggle("show", terbuka);
+
+    if (terbuka) {
+        confetti();
+    }
+}
+
+function musik() {
+    const audio = document.getElementById("lagu");
+
+    if (bermain) {
+        audio.pause();
+        bermain = false;
+    } else {
+        audio.play();
+        bermain = true;
+    }
+}
+
+function confetti() {
+    const simbol = ["🌸", "🌷", "💗", "✨", "❤️"];
+
+    for (let i = 0; i < 30; i++) {
+        const bunga = document.createElement("div");
+
+        bunga.className = "flower";
+        bunga.innerHTML = simbol[
+            Math.floor(Math.random() * simbol.length)
+        ];
+
+        bunga.style.left = Math.random() * 100 + "vw";
+        bunga.style.animationDuration =
+            (Math.random() * 3 + 3) + "s";
+
+        document.body.appendChild(bunga);
+
+        setTimeout(() => {
+            bunga.remove();
+        }, 6000);
+    }
+}
+
+// Animasi bunga otomatis
+setInterval(() => {
+    const bunga = document.createElement("div");
+
+    bunga.className = "flower";
+    bunga.innerHTML = "🌸";
+    bunga.style.left = Math.random() * 100 + "vw";
+    bunga.style.animationDuration = "6s";
+
+    document.body.appendChild(bunga);
+
+    setTimeout(() => bunga.remove(), 6000);
+
+}, 1200);
+
+</script>
+
+</body>
+</html>
